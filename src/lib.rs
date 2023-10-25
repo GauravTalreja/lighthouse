@@ -6,9 +6,11 @@ mod cooldown;
 mod enemies;
 mod loading;
 mod menu;
-pub mod palette;
+mod palette;
 mod player;
 mod towers;
+mod radians;
+mod collision;
 
 use crate::actions::ActionsPlugin;
 use crate::audio::InternalAudioPlugin;
@@ -24,6 +26,7 @@ use bevy::app::App;
 #[cfg(debug_assertions)]
 use bevy::diagnostic::{FrameTimeDiagnosticsPlugin, LogDiagnosticsPlugin};
 use bevy::prelude::*;
+use collision::CollisionPlugin;
 
 // This example game uses States to separate logic
 // See https://bevy-cheatbook.github.io/programming/states.html
@@ -53,6 +56,7 @@ impl Plugin for GamePlugin {
             CooldownPlugin,
             EnemiesPlugin,
             TowersPlugin,
+            CollisionPlugin,
         ));
 
         #[cfg(debug_assertions)]

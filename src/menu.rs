@@ -36,7 +36,7 @@ fn setup_menu(mut commands: Commands, font_assets: Res<FontAssets>, palette: Res
                 TextStyle {
                     font: font_assets.fira_sans.clone(),
                     font_size: 40.0,
-                    color: palette.white.into(),
+                    color: palette.white,
                 },
             ));
         });

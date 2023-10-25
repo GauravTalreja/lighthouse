@@ -47,4 +47,10 @@ pub struct TextureAssets {
 
     #[asset(path = "textures/turret.png")]
     pub texture_turret: Handle<Image>,
+
+    #[asset(path = "textures/bullet.png")]
+    pub texture_bullet: Handle<Image>,
+
+    #[asset(path = "textures/imp.png")]
+    pub imp_texture: Handle<Image>,
 }
