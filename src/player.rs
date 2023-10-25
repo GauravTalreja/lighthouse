@@ -1,5 +1,5 @@
 use crate::actions::Actions;
-use crate::collision::collider::Collider;
+
 use crate::loading::TextureAssets;
 use crate::GameState;
 use bevy::prelude::*;
@@ -18,7 +18,7 @@ impl Plugin for PlayerPlugin {
     }
 }
 
-fn spawn_player(mut commands: Commands, textures: Res<TextureAssets>) {
+fn spawn_player(_commands: Commands, _textures: Res<TextureAssets>) {
     // commands
     // .spawn(SpriteBundle {
     //     texture: textures.texture_bevy.clone(),

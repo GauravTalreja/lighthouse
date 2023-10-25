@@ -11,7 +11,7 @@ pub enum Targeting {
 
 impl Targeting {
     pub fn find_best_target<'a>(&self, enemies : &'a Vec<(Entity, Mut<'a, Enemy>, Mut<'a, Transform>)>) -> Option<&'a (Entity, Mut<'a, Enemy>, Mut<'a, Transform>)> {
-        if enemies.len() == 0 {
+        if enemies.is_empty() {
             None
         } else {
             match self {

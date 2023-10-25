@@ -39,7 +39,7 @@ pub fn death_loop(
         }
 
         commands.entity(entity).despawn();
-        death_event.send(EnemyDeathEvent { entity: entity, enemy: enemy.clone() });
+        death_event.send(EnemyDeathEvent { entity, enemy: enemy.clone() });
     }
 }
 

@@ -38,11 +38,11 @@ pub fn bullet_collision_check(
 }
 
 fn bullet_collision(
-    mut bullet_entity : Entity,
-    mut bullet : Mut<Bullet>,
-    mut enemy_entity : Entity,
+    bullet_entity : Entity,
+    bullet : Mut<Bullet>,
+    _enemy_entity : Entity,
     mut enemy : Mut<Enemy>,
-    mut commands : &mut Commands,
+    commands : &mut Commands,
 ) {
     commands.entity(bullet_entity).despawn();
     enemy.take_damage(bullet.dmg);
